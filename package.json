@@ -1,0 +1,11 @@
+{
+  "name": "progress-bot",
+  "version": "1.0.0",
+  "description": "Bot to know the project progress",
+  "main": "bot.js",
+  "author": "TheNaman047",
+  "dependencies": {
+    "discord.io": "^2.5.3",
+    "winston": "^2.4.0"
+  }
+}

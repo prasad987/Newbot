@@ -1,0 +1,14 @@
+{
+    "name": "simple-bot",
+    "version": "1.0.0",
+    "description": "This is a simple test and experiment bot",
+    "main": "simple-bot.js",
+    "author": "TheNaman047",
+    "scripts": {
+        "start": "forever simple-bot.js"
+    },
+    "dependencies": {
+	"forever" : "0.15.3",
+	"discord.js" : "11.2.1"
+	}
+}

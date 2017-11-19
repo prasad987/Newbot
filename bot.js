@@ -141,6 +141,7 @@ bot.on('message', message => {
             }
         }
         else {
+            message.delete();
             message.channel.send(sender + " this bot only accepts commands that start with '$'. Use $help to see available commands")
         }
     }

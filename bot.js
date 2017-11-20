@@ -22,7 +22,7 @@ fs.readFile(filePath, { encoding: 'utf-8' }, function (err, data) {
     }
 });
 
-bot.login('Mzc5NjcwMDUxMzExMDU4OTQ0.DOtbCg.u2kxrTrs_95JOCnVZOhnJJRyqH0');
+bot.login(process.env.BOT_TOKEN);
 
 bot.on('ready', () => {
     console.log("Connected");

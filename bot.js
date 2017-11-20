@@ -5,7 +5,6 @@ var bot = new Discord.Client();
 var getNotes = "";
 var getAccomplishedData = "";
 var addNextData = "";
-var auther;
 var log = "";
 var helpMessage;
 
@@ -23,7 +22,7 @@ fs.readFile(filePath, { encoding: 'utf-8' }, function (err, data) {
     }
 });
 
-bot.login(process.env.BOT_TOKEN);
+bot.login('Mzc5NjcwMDUxMzExMDU4OTQ0.DOtbCg.u2kxrTrs_95JOCnVZOhnJJRyqH0');
 
 bot.on('ready', () => {
     console.log("Connected");
@@ -42,14 +41,14 @@ bot.on('message', message => {
                 case "$showProgress":
                     message.channel.send("Needs to be decided !!!");
 
-                    log = log + "\n" + auther + " did " + msg + "\n";
+                    log = log + "\n" + sender + " did " + msg + "\n";
                     break;
 
                 case "$showAccomplished":
                     if (getAccomplishedData == "") message.channel.send("Nothing Yet !");
                     else message.channel.send(getAccomplishedData);
 
-                    log = log + "\n" + auther + " did " + msg + "\n";
+                    log = log + "\n" + sender + " did " + msg + "\n";
                     break;
 
                 case "$clearAccomplished":
@@ -57,14 +56,14 @@ bot.on('message', message => {
 
                     message.channel.send("CLEARED !!!");
 
-                    log = log + "\n" + auther + " did " + msg + "\n";
+                    log = log + "\n" + sender + " did " + msg + "\n";
                     break;
 
                 case "$showNext":
                     if (addNextData == "") message.channel.send("Nothing Yet !");
                     else message.channel.send(addNextData);
 
-                    log = log + "\n" + auther + " did " + msg + "\n";
+                    log = log + "\n" + sender + " did " + msg + "\n";
                     break;
 
                 case "$clearNext":
@@ -73,14 +72,14 @@ bot.on('message', message => {
 
                     message.channel.send("CLEARED !!!");
 
-                    log = log + "\n" + auther + " did " + msg + "\n";
+                    log = log + "\n" + sender + " did " + msg + "\n";
                     break;
 
                 case "$showNotes":
                     if (getNotes == "") message.channel.send("Nothing Yet !");
                     else message.channel.send(getNotes);
 
-                    log = log + "\n" + auther + " did " + msg + "\n";
+                    log = log + "\n" + sender + " did " + msg + "\n";
                     break;
 
                 case "$clearNotes":
@@ -89,7 +88,7 @@ bot.on('message', message => {
 
                     message.channel.send("CLEARED !!!");
 
-                    log = log + "\n" + auther + " did " + msg + "\n";
+                    log = log + "\n" + sender + " did " + msg + "\n";
                     break;
 
                 case "$getLogs":
@@ -98,9 +97,9 @@ bot.on('message', message => {
                     break;
 
                 case "$help":
-                    message.channel.send("Here you go " + auther + "\n\n" + helpMessage);
+                    message.channel.send("Here you go " + sender + "\n\n" + helpMessage);
 
-                    log = log + "\n" + auther + " did " + msg + "\n";
+                    log = log + "\n" + sender + " did " + msg + "\n";
                     break;
 
                 default:
@@ -109,7 +108,7 @@ bot.on('message', message => {
 
                         message.channel.send("NOTED !!!");
 
-                        log = log + "\n" + auther + " did " + msg + "\n";
+                        log = log + "\n" + sender + " did " + msg + "\n";
                     }
 
                     else if (msg.substr(0, 19) == "$updateAccomplished") {
@@ -117,7 +116,7 @@ bot.on('message', message => {
 
                         message.channel.send("NOTED !!!");
 
-                        log = log + "\n" + auther + " did " + msg + "\n";
+                        log = log + "\n" + sender + " did " + msg + "\n";
                     }
 
                     else if (msg.substr(0, 9) == "$addNotes") {
@@ -125,7 +124,7 @@ bot.on('message', message => {
 
                         message.channel.send("NOTED !!!");
 
-                        log = log + "\n" + auther + " did " + msg + "\n";
+                        log = log + "\n" + sender + " did " + msg + "\n";
                     }
 
                     else {

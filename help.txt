@@ -1,3 +1,3 @@
-$showvnkey - To check VNhax NormalKey.
-$showNext - What to do next.
-$showGuid - To view Added notes.
+!showvnkey - To check VNhax NormalKey.
+!showNext - What to do next.
+!showGuid - To view Added notes.

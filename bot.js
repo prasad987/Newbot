@@ -44,14 +44,14 @@ bot.on('message', message => {
                     log = log + "\n" + sender + " did " + msg + "\n";
                     break;
 
-                case "$showfgfg":
+                case "$showvnkey":
                     if (getGuidData == "") message.channel.send("Nothing Yet !");
                     else message.channel.send(getGuidData);
 
                     log = log + "\n" + sender + " did " + msg + "\n";
                     break;
 
-                case "$clearfgfg":
+                case "$clearvnkey":
                     getGuid = "";
 
                     message.channel.send("CLEARED !!!");
@@ -111,8 +111,8 @@ bot.on('message', message => {
                         log = log + "\n" + sender + " did " + msg + "\n";
                     }
 
-                    else if (msg.substr(0, 19) == "$updatefgfg") {
-                        getGuidData = getGuidData + "\n" + msg.substring(20, msg.length);
+                    else if (msg.substr(0, 12) == "$updatevnkey") {
+                        getGuidData = getGuidData + "\n" + msg.substring(40, msg.length);
 
                         message.channel.send("NOTED !!!");
 

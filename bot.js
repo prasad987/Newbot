@@ -75,14 +75,14 @@ bot.on('message', message => {
                     log = log + "\n" + sender + " did " + msg + "\n";
                     break;
 
-                case "!showNotes":
+                case "!showGuid":
                     if (getNotes == "") message.channel.send("Nothing Yet !");
                     else message.channel.send(getNotes);
 
                     log = log + "\n" + sender + " did " + msg + "\n";
                     break;
 
-                case "!clearNotes":
+                case "!clearGuid":
 
                     getNotes = "";
 
@@ -111,7 +111,7 @@ bot.on('message', message => {
                         log = log + "\n" + sender + " did " + msg + "\n";
                     }
 
-                    else if (msg.substr(0, 19) == "!updateguid") {
+                    else if (msg.substr(0, 19) == "!updateGuid") {
                         getAccomplishedData = getAccomplishedData + "\n" + msg.substring(20, msg.length);
 
                         message.channel.send("Updated !!!");
@@ -119,7 +119,7 @@ bot.on('message', message => {
                         log = log + "\n" + sender + " did " + msg + "\n";
                     }
 
-                    else if (msg.substr(0, 9) == "!addNotes") {
+                    else if (msg.substr(0, 9) == "!addGuid") {
                         getNotes = getNotes + "\n" + msg.substring(10, msg.length);
 
                         message.channel.send("NOTED !!!");

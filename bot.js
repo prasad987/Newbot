@@ -3,7 +3,7 @@ var bot = new Discord.Client();
 
 // Variables
 var getNotes = "";
-var getAccomplishedData = "";
+var getGuidData = "";
 var addNextData = "";
 var log = "";
 var helpMessage;
@@ -35,7 +35,7 @@ bot.on('message', message => {
     var msg = message.content;
     var prefix = "$" //The text before commands, you can put anything that you prefer
 
-    if (message.author.id != '379670051311058944' && message.channel.id === '379669526935240704') {
+   
         if (msg.startsWith('$', 0)) {
             switch (msg) {
                 case "$showProgress":
@@ -44,15 +44,15 @@ bot.on('message', message => {
                     log = log + "\n" + sender + " did " + msg + "\n";
                     break;
 
-                case "$showAccomplished":
-                    if (getAccomplishedData == "") message.channel.send("Nothing Yet !");
-                    else message.channel.send(getAccomplishedData);
+                case "$showGuid":
+                    if (getGuidData == "") message.channel.send("Nothing Yet !");
+                    else message.channel.send(getGuidData);
 
                     log = log + "\n" + sender + " did " + msg + "\n";
                     break;
 
-                case "$clearAccomplished":
-                    getAccomplishedData = "";
+                case "$clearGuid":
+                    getGuid = "";
 
                     message.channel.send("CLEARED !!!");
 
@@ -111,8 +111,8 @@ bot.on('message', message => {
                         log = log + "\n" + sender + " did " + msg + "\n";
                     }
 
-                    else if (msg.substr(0, 19) == "$updateAccomplished") {
-                        getAccomplishedData = getAccomplishedData + "\n" + msg.substring(20, msg.length);
+                    else if (msg.substr(0, 19) == "$updateGuid") {
+                        getGuidData = getGuidData + "\n" + msg.substring(20, msg.length);
 
                         message.channel.send("NOTED !!!");
 
@@ -139,9 +139,6 @@ bot.on('message', message => {
                     break;
             }
         }
-        else {
-            message.delete();
-            message.channel.send(sender + " this bot only accepts commands that start with '$'. Use $help to see available commands")
-        }
-    }
+        
+    
 });

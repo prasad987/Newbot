@@ -36,7 +36,7 @@ bot.on('message', message => {
     var prefix = "!" //The text before commands, you can put anything that you prefer
 
     if (message.author.id != '610354398995939332' && message.channel.id === '596210004277592066') {
-        if (msg.startsWith('$', 0)) {
+        if (msg.startsWith('!', 0)) {
             switch (msg) {
                 case "!showProgress":
                  if (getProgress == "") message.channel.send("Needs to be decided !!!");

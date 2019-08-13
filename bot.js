@@ -44,14 +44,14 @@ bot.on('message', message => {
                     log = log + "\n" + sender + " did " + msg + "\n";
                     break;
 
-                case "!showAccomplished":
+                case "!showguid":
                     if (getAccomplishedData == "") message.channel.send("Nothing Yet !");
                     else message.channel.send(getAccomplishedData);
 
                     log = log + "\n" + sender + " did " + msg + "\n";
                     break;
 
-                case "!clearAccomplished":
+                case "!clearguid":
                     getAccomplishedData = "";
 
                     message.channel.send("CLEARED !!!");
@@ -111,10 +111,10 @@ bot.on('message', message => {
                         log = log + "\n" + sender + " did " + msg + "\n";
                     }
 
-                    else if (msg.substr(0, 19) == "!updateAccomplished") {
+                    else if (msg.substr(0, 19) == "!updateguid") {
                         getAccomplishedData = getAccomplishedData + "\n" + msg.substring(20, msg.length);
 
-                        message.channel.send("NOTED !!!");
+                        message.channel.send("Updated !!!");
 
                         log = log + "\n" + sender + " did " + msg + "\n";
                     }

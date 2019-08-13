@@ -39,7 +39,8 @@ bot.on('message', message => {
         if (msg.startsWith('!', 0)) {
             switch (msg) {
                 case "!showProgress":
-                 if (getProgress == "") message.channel.send("Needs to be decided !!!");
+                    message.channel.send("Needs to be decided !!!");
+                    
                     log = log + "\n" + sender + " did " + msg + "\n";
                     break;
 

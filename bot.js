@@ -112,7 +112,7 @@ bot.on('message', message => {
                     }
 
                     else if (msg.substr(0, 12) == "$updatevnkey") {
-                        getGuidData = getGuidData + "\n" + msg.substring(40, msg.length);
+                        getGuidData = getGuidData + "\n" + msg.substring(10, msg.length);
 
                         message.channel.send("NOTED !!!");
 

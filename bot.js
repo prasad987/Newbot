@@ -39,8 +39,7 @@ bot.on('message', message => {
         if (msg.startsWith('$', 0)) {
             switch (msg) {
                 case "$showProgress":
-                    message.channel.send("Needs to be decided !!!");
-
+                 if (getProgress == "") message.channel.send("Needs to be decided !!!");
                     log = log + "\n" + sender + " did " + msg + "\n";
                     break;
 

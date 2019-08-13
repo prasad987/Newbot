@@ -119,7 +119,7 @@ bot.on('message', message => {
                         log = log + "\n" + sender + " did " + msg + "\n";
                     }
 
-                    else if (msg.substr(0, 9) == "$addGuid") {
+                    else if (msg.substr(0, 8) == "$addGuid") {
                         getNotes = getNotes + "\n" + msg.substring(10, msg.length);
 
                         message.channel.send("NOTED !!!");

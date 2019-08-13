@@ -44,14 +44,14 @@ bot.on('message', message => {
                     log = log + "\n" + sender + " did " + msg + "\n";
                     break;
 
-                case "$showGuid":
+                case "$showfgfg":
                     if (getGuidData == "") message.channel.send("Nothing Yet !");
                     else message.channel.send(getGuidData);
 
                     log = log + "\n" + sender + " did " + msg + "\n";
                     break;
 
-                case "$clearGuid":
+                case "$clearfgfg":
                     getGuid = "";
 
                     message.channel.send("CLEARED !!!");
@@ -75,14 +75,14 @@ bot.on('message', message => {
                     log = log + "\n" + sender + " did " + msg + "\n";
                     break;
 
-                case "$showNotes":
+                case "$showGuid":
                     if (getNotes == "") message.channel.send("Nothing Yet !");
                     else message.channel.send(getNotes);
 
                     log = log + "\n" + sender + " did " + msg + "\n";
                     break;
 
-                case "$clearNotes":
+                case "$clearGuid":
 
                     getNotes = "";
 
@@ -111,7 +111,7 @@ bot.on('message', message => {
                         log = log + "\n" + sender + " did " + msg + "\n";
                     }
 
-                    else if (msg.substr(0, 19) == "$updateGuid") {
+                    else if (msg.substr(0, 19) == "$updatefgfg") {
                         getGuidData = getGuidData + "\n" + msg.substring(20, msg.length);
 
                         message.channel.send("NOTED !!!");
@@ -119,7 +119,7 @@ bot.on('message', message => {
                         log = log + "\n" + sender + " did " + msg + "\n";
                     }
 
-                    else if (msg.substr(0, 9) == "$addNotes") {
+                    else if (msg.substr(0, 9) == "$addGuid") {
                         getNotes = getNotes + "\n" + msg.substring(10, msg.length);
 
                         message.channel.send("NOTED !!!");

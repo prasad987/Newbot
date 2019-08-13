@@ -14,11 +14,11 @@ $showNext - What to do next.
 
 $clearNext - To reset next task in case of an error.
 
-$addNotes - Write this and after a space add the notes to be added.
-    Format - $addNotes notes
+$addGuid - Write this and after a space add the notes to be added.
+    Format - $addGuid notes
 
-$showNotes - To view Added notes.
+$showGuid - To view Added notes.
 
-$clearNotes - To clear the created notes
+$clearGuid - To clear the created notes
 
 $getLogs - To get all the activities for which I have been used.

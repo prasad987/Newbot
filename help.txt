@@ -1,24 +1,3 @@
-$showProgres - To see the progress of the project.
-
-$updateAccomplished - To add the accomplished tasks.
-    Format: $updateAccomplished what have been accomplished till now point wise
-
-$showAccomplished - To check how much has been done.
-
-$clearAccomplished - To reset accomplished task in case of an error.
-
-$addNext - To add the next thing to be done.
-    Format: $addNext what needs to be done next point wise
-
+$showvnkey - To check VNhax NormalKey.
 $showNext - What to do next.
-
-$clearNext - To reset next task in case of an error.
-
-$addGuid - Write this and after a space add the notes to be added.
-    Format - $addGuid notes
-
 $showGuid - To view Added notes.
-
-$clearGuid - To clear the created notes
-
-$getLogs - To get all the activities for which I have been used.
